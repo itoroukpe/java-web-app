@@ -33,9 +33,9 @@ pipeline{
     }
     stage('5.Deploy2Tomcat'){
     steps{
-    sshagent(['32d5fb4f-d92f-4a10-9f12-2738eab55fcc']) {
-    sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@http://54.69.135.72:/opt/tomcat9/webapps/app"
-    //deploy adapters: [tomcat9(credentialsId: '4d77fa4c-4713-4738-b0f5-ee7b58ba3b19', path: '', url: 'http://54.69.135.72:8080/')], contextPath: null, war: 'target/*war'
+    //sshagent(['32d5fb4f-d92f-4a10-9f12-2738eab55fcc']) {
+    //sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@http://54.69.135.72:/opt/tomcat9/webapps/app"
+    deploy adapters: [tomcat9(credentialsId: '4d77fa4c-4713-4738-b0f5-ee7b58ba3b19', path: '', url: 'http://54.69.135.72:8080/')], contextPath: null, war: 'target/*war'
 }
     
 } 
