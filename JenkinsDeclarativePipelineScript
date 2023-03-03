@@ -10,7 +10,7 @@ pipeline{
   stages {
     stage('1.CodeClone'){
       steps{
-          git branch: 'stage', credentialsId: 'GitHubCredentials', url: 'https://github.com/LandmakTechnology/web-app'
+          git branch: 'stage', credentialsId: 'GitHubCredentials', url: 'https://github.com/itoroukpe/maven-web-apps'
       }
     } 
     stage('2.mavenBuild'){
@@ -33,7 +33,7 @@ pipeline{
     stage('5.Deploy2Tomcat'){
     steps{
     sshagent(['32d5fb4f-d92f-4a10-9f12-2738eab55fcc']) {
-    sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@172.31.15.31:/opt/tomcat9/webapps/app"
+    sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@http://54.69.135.72:/opt/tomcat9/webapps/app"
 }
     
 } 
