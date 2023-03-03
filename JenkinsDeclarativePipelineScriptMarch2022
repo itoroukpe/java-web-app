@@ -57,26 +57,26 @@ pipeline{
 The build was great.
 
 Regards
-Landmark Technologies 
-+14372152483''', cc: 'mylandmarktech@gmail.com', from: '', replyTo: '', subject: 'sucess', to: 'mylandmarktech@gmail.com'
+Rondus Technologies 
++18323357561''', cc: 'rondusllc@gmail.com', from: '', replyTo: '', subject: 'success', to: 'rondusllc@gmail.com'
     }
     success{
-      mail bcc: 'mylandmarktech@gmail.com', body: '''Success,
+      mail bcc: 'rondusllc@gmail.com', body: '''Success,
 
 The build was great.
 
 Regards
-Landmark Technologies 
-+14372152483''', cc: 'mylandmarktech@gmail.com', from: '', replyTo: '', subject: 'sucess', to: 'mylandmarktech@gmail.com'
+Rondus Technologies 
++18323357561''', cc: 'rondusllc@gmail.com', from: '', replyTo: '', subject: 'success', to: 'rondusllc@gmail.com'
     }
     failure{
-      mail bcc: 'mylandmarktech@gmail.com', body: '''Failed,
+      mail bcc: 'rondusllc@gmail.com', body: '''Failed,
 
 The build Failed.
 
 Regards
-Landmark Technologies 
-+14372152483''', cc: 'mylandmarktech@gmail.com', from: '', replyTo: '', subject: 'Failed', to: 'mylandmarktech@gmail.com'
+Rondus Technologies 
++18323357561''', cc: 'rondusllc@gmail.com', from: '', replyTo: '', subject: 'Failed', to: 'rondusllc@gmail.com'
     }
   }
 
