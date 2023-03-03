@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>LandmarkTechnologies- Home Page</title>
+<title>RondusTechnologies- Home Page</title>
 <link href="images/mylandmarklogo.png" rel="icon">
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Landmark Technologies, USA Office.</h1>
+<h1 align="center">Welcome to Rondus Technologies, USA Office.</h1>
 <h1 align="center">We are developing and supporting quality Software Solutions and serving over 5 billion users.
 	We also offer Training for DevOps with Linux and Cloud Engineers for best performance.</h1>
 <hr>
@@ -33,20 +33,20 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 		<img src="images/mylandmarklogo.png" alt="" width="150">
 	</span>
 	<span style="font-weight: bold;">
-                Landmark Technology, 
-		Toronto, Ontario, Canada
-		+1 437 215 2483,
-		mylandmarktech@gmail.com
+                Rondus Technology, 
+		Auburn, WA, USA
+		+1 832-335-7561,
+		rondusllc@gmail.com
 		<br>
-		<a href="mailto:mylandmarktech@gmail.com">Mail to Landmark Technologies</a>
+		<a href="mailto:rondusllc@gmail.com">Mail to Rondus Technologies</a>
 	</span>
 </div>
 <hr>
 	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
 <hr>
 <hr>
-<p align=center>Landmark Technologies - Consultant, Training and Software Development</p>
-<p align=center><small>Copyrights 2021 by <a href="http://mylandmarktech.com/">Landmark Technologies</a> </small></p>
+<p align=center>Rondus Technologies - Consultant, Training and Software Development</p>
+<p align=center><small>Copyrights 2021 by <a href="http://rondustech.com/">Rondus Technologies</a> </small></p>
 
 </body>
 </html>
