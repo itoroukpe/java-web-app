@@ -3,6 +3,7 @@ pipeline{
   agent any  
   tools {
     maven "maven3.8.4"
+    //def mavenHome = tool name: 'maven3.8.4'
   }
   triggers {
   pollSCM '* * * * * '
@@ -21,39 +22,21 @@ pipeline{
     stage('3.CodeQuality') {
       steps{
       sh "echo reports done"
-      //sh "mvn sonar:sonar"
+      sh "mvn sonar:sonar"
       } 
     }
     stage('4.uploadToNexus'){
       steps{
       sh "echo artifacts uploaded"
-      //sh "mvn deploy"
+      sh "mvn deploy"
       } 
     }
     stage('5.Deploy2Tomcat'){
     steps{
     sshagent(['32d5fb4f-d92f-4a10-9f12-2738eab55fcc']) {
     sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@http://54.69.135.72:/opt/tomcat9/webapps/app"
+    //deploy adapters: [tomcat9(credentialsId: '4d77fa4c-4713-4738-b0f5-ee7b58ba3b19', path: '', url: 'http://54.69.135.72:8080/')], contextPath: null, war: 'target/*war'
 }
     
 } 
-    }
-    }
-  post{
-    always {
-     mail bcc: 'td-app@gmail.com', body: '''Build complete 
-
-Landmark Technologies''', cc: 'td-app@gmail.com', from: '', replyTo: '', subject: 'Build done', to: 'td-app@gmail.com'
-    } 
-    failure {
-    mail bcc: 'td-app@gmail.com', body: '''Build complete 
-
-Landmark Technologies''', cc: 'td-app@gmail.com', from: '', replyTo: '', subject: 'Build failed', to: 'td-app@gmail.com'
-    }
-    success {
-    mail bcc: 'td-app@gmail.com', body: '''Build complete 
-
-Landmark Technologies''', cc: 'td-app@gmail.com', from: '', replyTo: '', subject: 'Build succeed', to: 'td-app@gmail.com'
-    }
-  }  
-  }
+    
