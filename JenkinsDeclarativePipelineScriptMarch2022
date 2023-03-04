@@ -7,7 +7,7 @@ pipeline{
     stage('1.clone'){
       steps{
             sh "echo clonning the latest version of the code" 
-            git branch: 'feature', credentialsId: 'Git_Credentials', url: 'https://github.com/LandmakTechnology/paypal-web-app'
+            git branch: 'feature', credentialsId: 'Git_Credentials', url: 'https://github.com/itoroukpe/java-web-app'
             sh "echo clonning successful"
       }
     }
@@ -45,14 +45,14 @@ pipeline{
         input message: 'Please approve deployment to Production'
       }
         sshagent(['agentcredentials']) {
-        sh "scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.89.218:/opt/tomcat9/webapps/app.war"
+        sh "scp -o StrictHostKeyChecking=no target/*.war ec2-user@http://54.69.135.72/:/opt/tomcat9/webapps/app.war"
       }
     }
   }
   } 
     post{
     always{
-      mail bcc: 'mylandmarktech@gmail.com', body: '''Success,
+      mail bcc: 'rondusllc@gmail.com', body: '''Success,
 
 The build was great.
 
